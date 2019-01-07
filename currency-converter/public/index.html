@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Currency Converter">
+    <meta name="apple-mobile-web-app-title" content="Currency Converter">
+    <meta name="theme-color" content="#f0f8ff">
+    <meta name="msapplication-navbutton-color" content="#f0f8ff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" sizes="256x256" href="images/icons/hand.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="images/icons/hand.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/hand.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="images/icons/hand.png">
+
+    <title>Currency Converter</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/png" href="/images/icons/hand.png"/>
+</head>
+  <body>
+  <header>
+      <h1 class="center">Currency Converter</h1>
+  </header>
+  <main>
+      <div class="container">
+        <label for="amount">Amount to Convert: </label>
+        <input type="text" id="amount"/><br/><br/>
+      
+        <label for="from_currency">From Currency: </label>
+        <select id="from_currency" onchange="onSelectChange();">
+          <option value="please_select">Please Select</select>
+        </select> <br/><br/>
+
+        <label for="from_currency">To Currency: </label>
+        <select id="to_currency" onchange="onSelectChange();">
+          <option value="please_select">Please Select</select>
+        </select>  <br/><br/>
+        <button id="convert_currency" type="button" onclick="convertCurrency();">Convert</button>
+        <p id="currency_conversion"></p>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
